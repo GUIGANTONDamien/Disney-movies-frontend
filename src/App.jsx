@@ -1,11 +1,10 @@
-import RemoveMe from './components/RemoveMe';
+import React from 'react';
+import MainRouter from './routers/MainRouter';
 
-function App() {
+export default function App() {
   return (
     <div className="App">
-      <RemoveMe />
+      <MainRouter />
     </div>
   );
 }
-
-export default App;
