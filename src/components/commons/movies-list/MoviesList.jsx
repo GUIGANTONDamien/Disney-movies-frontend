@@ -8,15 +8,6 @@ import '../../movie.css';
 
 export default function MoviesList(props) {
   const { search } = props;
-  // const [movies, setMovies] = React.useState([]);
-
-  // React.useEffect(() => {
-  //   fetch(FEATURED_API)
-  //     .then((res) => res.json())
-  //     .then((data) => {
-  //       setMovies(data.results);
-  //     });
-  // }, []);
 
   return (
     <div className="movie-container">

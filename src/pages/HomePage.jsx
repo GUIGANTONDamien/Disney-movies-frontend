@@ -2,6 +2,7 @@ import React from 'react';
 import MoviesList from '../components/commons/movies-list/MoviesList';
 import Header from '../components/commons/header/Header';
 import '../components/movie.css';
+import HeaderSearch from '../components/commons/header/HeaderSearch';
 
 const API =
   'https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1';
@@ -26,7 +27,8 @@ export default function HomePage() {
 
   return (
     <div className="container">
-      <Header setSearch={setSearch} />
+      <Header />
+      <HeaderSearch setSearch={setSearch} />
       <MoviesList search={search} />
     </div>
   );
