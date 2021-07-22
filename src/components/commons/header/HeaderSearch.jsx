@@ -17,6 +17,7 @@ export default function HeaderSearch(props) {
       fetch(SEARCH_API + input)
         // 2. récupère la réponse de l'API en json
         .then((res) => {
+          console.log(res);
           return res.json();
         })
         // 3. une fois la réponse de l'API disponible, l'envoie dans le state (note : data peut etre changer en n'importe quoi)

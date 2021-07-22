@@ -18,7 +18,7 @@ export default function Inscription() {
   const handleSubmit = (event) => {
     event.preventDefault();
     axios
-      .post(`${process.env.REACT_APP_BACKEND_URL}/inscription`, user)
+      .post(`${process.env.REACT_APP_BACKEND_URL}/`, user)
       .then((response) => {
         JSON.stringify(
           response,
@@ -51,7 +51,9 @@ export default function Inscription() {
       <div className="container">
         <div className="signup-content">
           <div className="signup-form">
-            <h2 className="form-title">INSCRIPTION</h2>
+            <h2 className="form-title">
+              Sign<span style={{ color: 'red' }}>UP</span>
+            </h2>
             <form className="register-form" onSubmit={handleSubmit}>
               <div className="container-input">
                 <div>
@@ -62,7 +64,7 @@ export default function Inscription() {
                     className="form-group"
                     name="email"
                     type="email"
-                    placeholder="Email"
+                    placeholder="love@movie.com"
                     value={user}
                     setValue={setUser}
                   />
@@ -75,7 +77,7 @@ export default function Inscription() {
                 </div>
                 <div>
                   <FormInput
-                    placeholder="Password "
+                    placeholder="****************** "
                     className="form-group"
                     name="password"
                     type="text"
@@ -86,7 +88,7 @@ export default function Inscription() {
                 <hr />
               </div>
               <div className="container-button">
-                <input type="submit" value="Inscription" />
+                <input className="submit" type="submit" value="S'incrire" />
               </div>
             </form>
             <Link className="text-route" to="/connexion">

@@ -20,7 +20,6 @@ body {
   flex-direction: row;
   justify-content: flex-end;
   align-items: center;
-  margin-right: 1rem;
   padding: 0.5rem;
   background-color: #000000;
 }
@@ -133,4 +132,19 @@ header {
 
 .tag.red {
   color: red;
+}
+
+@media (max-width: 680px) {
+  .navigation {
+    display: flex;
+  }
+  .link {
+    padding: 0.2rem;
+  }
+  .search {
+    width: 100%;
+  }
+  .container-movie-item {
+    display: none;
+  }
 }
