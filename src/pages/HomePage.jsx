@@ -21,7 +21,6 @@ export default function HomePage() {
       .then((res) => res.json())
       // 3. une fois la réponse de l'API disponible, l'envoie dans le state (note : data peut etre changer en n'importe quoi)
       .then((data) => {
-        console.log(data);
         setSearch(data.results);
       });
     // [] dire au useEffect qu'il ne doit se déclencher qu'au montage du component

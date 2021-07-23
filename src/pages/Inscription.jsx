@@ -37,7 +37,7 @@ export default function Inscription() {
           title: 'Veuillez vérifier les informations saisies',
         })
       )
-      .then(() => history.push('/'));
+      .then(() => history.push('/connexion'));
   };
 
   return (

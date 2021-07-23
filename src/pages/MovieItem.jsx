@@ -4,24 +4,28 @@ import '../components/movie.css';
 
 function MovieItem() {
   const [createMovie, setCreateMovie] = useState([]);
-  useEffect(() => {
-    axios
-      .get(`${process.env.REACT_APP_BACKEND_URL}/account`)
+  useEffect(async () => {
+    await axios
+      .get(`${process.env.REACT_APP_BACKEND_URL}/`)
       .then((response) => {
-        console.error();
         setCreateMovie(response.data);
       });
   }, []);
 
   return (
     <div>
-      <div className="container-movie-item">
-        title={createMovie.title}
-        poster_path={createMovie.description}
-        overview={createMovie.overview}
-        vote_average={createMovie.price}
-        key={createMovie.id}
-      </div>
+      {!createMovie ? (
+        <p />
+      ) : (
+        createMovie.map((element) => (
+          <div key={element.id}>
+            <p>{element.title}</p>
+            <p>{element.poster_path}</p>
+            <p>{element.overview}</p>
+            <p>{element.vote_average}</p>
+          </div>
+        ))
+      )}
     </div>
   );
 }

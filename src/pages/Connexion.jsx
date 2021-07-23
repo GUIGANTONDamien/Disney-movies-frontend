@@ -24,8 +24,8 @@ export default function Connexion() {
         password,
       })
       .then((results) => {
-        localStorage.setItem('USERID', results.data.user.id);
-        localStorage.setItem('TOKEN', results.data.token);
+        localStorage.setItem('USERID', results.data.id);
+        // localStorage.setItem('TOKEN', results.data.token);
       })
       .then(() => history.push('/home'));
   };
